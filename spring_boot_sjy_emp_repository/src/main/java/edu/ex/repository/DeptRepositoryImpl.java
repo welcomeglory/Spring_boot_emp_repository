@@ -6,7 +6,8 @@ import org.springframework.stereotype.Repository;
 
 import edu.ex.vo.DeptVO;
 
-@Repository
+// 스프링 컨테이너안에서 객체 생성.
+@Repository //@component +의미(DAO)
 public class DeptRepositoryImpl implements DeptRepository{
 	
 	@Override
