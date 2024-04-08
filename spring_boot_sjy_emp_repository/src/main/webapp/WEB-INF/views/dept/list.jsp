@@ -14,12 +14,16 @@
 			<td>부서번호</td>
 			<td>부서이름</td>
 			<td>지역</td>
+			<td>삭제</td>			
 		</tr>
 		<c:forEach var="dept" items="${depts}">
 		<tr>
 			<td>${dept.deptno}</td>
 			<td>${dept.dname}</td>
 			<td>${dept.loc}</td>
+			<td>
+			<a href="/dept/delete?deptno=${dept.deptno}">삭제</a>
+			</td>			
 		</tr>
 		</c:forEach>
 	</table>

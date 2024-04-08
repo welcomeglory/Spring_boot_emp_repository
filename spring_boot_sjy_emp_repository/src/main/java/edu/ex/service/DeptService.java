@@ -6,6 +6,7 @@ import edu.ex.vo.DeptVO;
 
 public interface DeptService {
 	List<DeptVO> getList();
-	void register(DeptVO deptVO);	
+	void register(DeptVO deptVO);
+	void delete(int deptno);	
 	
 }

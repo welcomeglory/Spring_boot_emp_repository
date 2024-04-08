@@ -13,19 +13,27 @@ import edu.ex.vo.DeptVO;
 public class DeptServiceImpl implements DeptService {
 
 	@Autowired
-	private DeptRepository deptRepository;// 폴리멀피즘 적용
+	private DeptRepository deptRepository;// 다형성 적용
 //	private DeptRepositoryImpl  deptRepositoryImpl;
 
 	@Override
 	public List<DeptVO> getList() {
-	System.out.println("getList()..");
+		System.out.println("getList()..");
 		return deptRepository.selectList();
 	}
-	
+
 	@Override
 	public void register(DeptVO deptVO) {
-	System.out.println("register()..");
-		return ;
+		System.out.println("register()..");
+		deptRepository.insert(deptVO);
+		return;
+	}
+
+	@Override
+	public void delete(int deptno) {
+		System.out.println("delete()..");
+		deptRepository.delete(deptno);
+		return;
 	}
 
 }
