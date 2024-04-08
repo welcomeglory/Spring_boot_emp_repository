@@ -14,7 +14,6 @@ import java.sql.ResultSet;
 import java.sql.Statement;
 
 //데이터소스(커넥션풀 테스트)
-
 @SpringBootTest//테스트를 위한 웹프로그래밍 환경 구축
 class DataSourceTest {
 
