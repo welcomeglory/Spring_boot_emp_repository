@@ -6,6 +6,6 @@ import edu.ex.vo.DeptVO;
 
 public interface DeptRepository {
 	List<DeptVO> selectList();
-	
+	void insert(DeptVO deptVO);
 	
 }
