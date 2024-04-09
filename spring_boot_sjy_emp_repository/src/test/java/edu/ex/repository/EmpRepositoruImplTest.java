@@ -10,7 +10,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import edu.ex.service.EmpService;
 import edu.ex.vo.EmpVO;
 
-@SpringBootTest
+@SpringBootTest//톰캣생성해라!!!
 class EmpRepositoruImplTest {
 	
 	@Autowired
@@ -36,7 +36,7 @@ class EmpRepositoruImplTest {
 	@Disabled
 	@Test
 	void testInsert() {
-		empRepository.insert(new EmpVO(8000,"GRACE","PROGRAMER",7839,"24/08/01",4000,	1000,30));
+		empRepository.insert(new EmpVO(8000,"GRACE","PROGRAMER",7839,null,4000,	1000,30));
 		for(EmpVO empVO : empRepository.selectList() ) {
 			System.out.println("직원번호"+empVO.getEmpno());
 			System.out.println("직원이름"+empVO.getEname());			
@@ -48,6 +48,7 @@ class EmpRepositoruImplTest {
 			System.out.println("부서번호"+empVO.getDeptno());		
 		}		
 	}
+	@Disabled
 	@Test
 	void testDelete() {
 		empRepository.delete(8000);
