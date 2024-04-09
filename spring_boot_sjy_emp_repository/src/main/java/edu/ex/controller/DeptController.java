@@ -23,7 +23,6 @@ public class DeptController {
 		model.addAttribute("depts",deptService.getList());
 		return "/dept/list";
 
-//		return "/dept/list";
 	}
 	
 	@PostMapping("/register")
