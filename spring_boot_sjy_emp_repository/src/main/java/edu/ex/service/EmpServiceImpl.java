@@ -15,7 +15,7 @@ import edu.ex.vo.EmpVO;
 public class EmpServiceImpl implements EmpService {
 
 	@Autowired
-	private EmpRepository empRepository;// 다형성 적용
+	private EmpRepository empRepository;// Polymorphism 적용
 
 	@Override
 	public List<EmpVO> getList() {
