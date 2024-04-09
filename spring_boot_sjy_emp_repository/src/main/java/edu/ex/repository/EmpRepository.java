@@ -7,7 +7,7 @@ import edu.ex.vo.EmpVO;
 
 public interface EmpRepository {
 	List<EmpVO> selectList();
-//	void insert(EmpVO empVO);
-//	void delete(int deptno);
+	void insert(EmpVO empVO);
+	void delete(int empno);
 	
 }

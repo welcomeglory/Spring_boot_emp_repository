@@ -32,4 +32,5 @@ class EmpServiceImplTest {
 			System.out.println("부서번호"+empVO.getDeptno());		
 		}		
 	}
+	
 }

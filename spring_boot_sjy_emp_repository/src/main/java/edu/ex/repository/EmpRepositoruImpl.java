@@ -67,67 +67,72 @@ public class EmpRepositoruImpl implements EmpRepository {
 
 		return empList;
 	}
-//	public void insert(DeptVO deptVO) {
-//		int result = 0;
-//		Connection conn = null;
-//		PreparedStatement psmt = null;
-//
-//		try {
-//			String sql = "insert into  dept values (?,?,?)";
-//
-//			conn = dataSource.getConnection();
-//			psmt = conn.prepareStatement(sql);
-//
-//			psmt.setInt(1, deptVO.getDeptno());
-//			psmt.setString(2,  deptVO.getDname());
-//			psmt.setString(3, deptVO.getLoc());
-//
-//			int rn = psmt.executeUpdate();
-//
-//			System.out.println("insert 된 갯수" + rn);
-//		} catch (Exception e) {
-//			e.printStackTrace();
-//		} finally {
-//			try {
-//				if (psmt != null)
-//					psmt.close();
-//				if (conn != null)
-//					conn.close();
-//			} catch (Exception e2) {
-//				e2.printStackTrace();
-//			}
-//		}
-//	
-//	}
-//	public void delete(int deptno) {
-//
-//		Connection conn = null;
-//		PreparedStatement psmt = null;
-//
-//		try {
-//
-//			String sql = "delete from dept where deptno=?";
-//
-//			conn = dataSource.getConnection();
-//			psmt = conn.prepareStatement(sql);
-//
-//			psmt.setInt(1, deptno);
-//			
-//			int rn = psmt.executeUpdate();
-//			System.out.println("delete 된 갯수" + rn);
-//
-//		} catch (Exception e) {
-//			e.printStackTrace();
-//		} finally {
-//			try {
-//				if (psmt != null)
-//					psmt.close();
-//				if (conn != null)
-//					conn.close();
-//			} catch (Exception e2) {
-//				e2.printStackTrace();
-//			}
-//		}
-//		return;
-//	}
+	public void insert(EmpVO empVO) {
+		int result = 0;
+		Connection conn = null;
+		PreparedStatement psmt = null;
+
+		try {
+			String sql = "insert into  emp values (?,?,?,?,?,?,?,?)";
+
+			conn = dataSource.getConnection();
+			psmt = conn.prepareStatement(sql);
+
+			psmt.setInt(1,empVO.getEmpno());
+			psmt.setString(2, empVO.getEname());
+			psmt.setString(3, empVO.getJob());
+			psmt.setInt(4,empVO.getMgr());
+			psmt.setString(5, empVO.getHiredate());
+			psmt.setInt(6,empVO.getSal());
+			psmt.setInt(7,empVO.getComm());
+			psmt.setInt(8,empVO.getDeptno());
+
+			int rn = psmt.executeUpdate();
+
+			System.out.println("insert 된 갯수" + rn);
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			try {
+				if (psmt != null)
+					psmt.close();
+				if (conn != null)
+					conn.close();
+			} catch (Exception e2) {
+				e2.printStackTrace();
+			}
+		}
+	
+	}
+	public void delete(int empno) {
+
+		Connection conn = null;
+		PreparedStatement psmt = null;
+
+		try {
+
+			String sql = "delete from emp where empno=?";
+
+			conn = dataSource.getConnection();
+			psmt = conn.prepareStatement(sql);
+
+			psmt.setInt(1, empno);
+			
+			int rn = psmt.executeUpdate();
+			System.out.println("delete 된 갯수" + rn);
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			try {
+				if (psmt != null)
+					psmt.close();
+				if (conn != null)
+					conn.close();
+			} catch (Exception e2) {
+				e2.printStackTrace();
+			}
+		}
+		return;
+	}
 }

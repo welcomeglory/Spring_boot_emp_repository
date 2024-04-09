@@ -7,7 +7,7 @@ import edu.ex.vo.EmpVO;
 
 public interface EmpService {
 	List<EmpVO> getList();
-//	void register(DeptVO deptVO);
-//	void remove(int deptno);	
-	
+	void register(EmpVO empVO);
+	void remove(int empno);	
+
 }

@@ -16,26 +16,24 @@ public class EmpServiceImpl implements EmpService {
 
 	@Autowired
 	private EmpRepository empRepository;// 다형성 적용
-//	private DeptRepositoryImpl  deptRepositoryImpl;
 
 	@Override
 	public List<EmpVO> getList() {
 		System.out.println("getList()..");
 		return empRepository.selectList();
 	}
-//	//repository에 있는 insert호출
-//	@Override
-//	public void register(DeptVO deptVO) {
-//		System.out.println("register()..");
-//		deptRepository.insert(deptVO);
-//		return;
-//	}
-//	@Override
-//	public void remove(int deptno) {
-//		System.out.println("delete()..");
-//		deptRepository.delete(deptno);
-//		return;
-//		
-//	}
+	@Override
+	public void register(EmpVO empVO) {
+		System.out.println("register()..");
+		empRepository.insert(empVO);
+		return;
+	}
+	@Override
+	public void remove(int empno) {
+		System.out.println("delete()..");
+		empRepository.delete(empno);
+		return;
+		
+	}
 
 }

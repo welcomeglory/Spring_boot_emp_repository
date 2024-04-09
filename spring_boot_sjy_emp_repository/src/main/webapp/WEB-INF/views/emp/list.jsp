@@ -14,11 +14,12 @@
 			<td>직원번호</td>
 			<td>직원이름</td>
 			<td>직무</td>
-			<td>부서</td>
+			<td>담당번호</td>
 			<td>입사일</td>
 			<td>월급</td>
 			<td>보너스</td>
 			<td>부서번호</td>
+			<td>삭제</td>
 		</tr>
 		<c:forEach var="emp" items="${emps}">
 			<tr>
@@ -30,11 +31,12 @@
 				<td>${emp.sal}</td>
 				<td>${emp.comm}</td>
 				<td>${emp.deptno}</td>
-				<!--				<td>
- 	<a href="${pageContext.request.contextPath}/dept/remove?deptno=${dept.deptno}"><button type="button">삭제</button></a></td> -->
+				<td>
+				<a href="${pageContext.request.contextPath}/emp/remove?empno=${emp.empno}"><button type="button">삭제</button></a>
+				</td>
 			</tr>
 		</c:forEach>
 	</table>
-	<!--	<a href="${pageContext.request.contextPath}/dept/insert_view">부서입력</a>-->
+	<a href="${pageContext.request.contextPath}/emp/insert_view">직원입력</a>
 </body>
 </html>
