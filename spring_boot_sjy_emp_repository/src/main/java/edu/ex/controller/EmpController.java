@@ -36,7 +36,7 @@ public class EmpController {
 	//insert.jsp페이지를 보는 함수
 	@GetMapping("/insert_view")
 	public String inser_view() {
-		System.out.println("inser_view()..");
+		System.out.println("insert_view()..");
 		return "/emp/insert";
 	}
 	@GetMapping("/remove")
