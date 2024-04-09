@@ -16,14 +16,6 @@ import edu.ex.vo.DeptVO;
 @Repository // @Component + 의미(DAO)
 public class DeptRepositoryImpl implements DeptRepository {
 
-//   public MemberDao() {
-//      try {
-//         Context context = new InitialContext();
-//         dataSource = (DataSource) context.lookup("java:comp/env/jdbc/oracle");
-//      } catch (Exception e) {
-//         e.printStackTrace();
-//      }
-//   }
 	@Autowired
 	private DataSource dataSource;
 

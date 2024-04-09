@@ -21,19 +21,19 @@ public class DeptServiceImpl implements DeptService {
 		System.out.println("getList()..");
 		return deptRepository.selectList();
 	}
-
+	//repository에 있는 insert호출
 	@Override
 	public void register(DeptVO deptVO) {
 		System.out.println("register()..");
 		deptRepository.insert(deptVO);
 		return;
 	}
-
 	@Override
-	public void delete(int deptno) {
+	public void remove(int deptno) {
 		System.out.println("delete()..");
 		deptRepository.delete(deptno);
 		return;
+		
 	}
 
 }

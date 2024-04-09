@@ -21,27 +21,28 @@ public class DeptController {
 	public String list(Model model) {
 		System.out.println("list()..");
 		model.addAttribute("depts",deptService.getList());
-	
 		return "/dept/list";
+
+//		return "/dept/list";
 	}
 	
 	@PostMapping("/register")
 	public String insert(DeptVO deptVO) {
 		System.out.println("insert()..");
-		deptService.register(deptVO);
-
+		deptService.register(deptVO);//command객체?
 		return "redirect:/dept/list";//redirect: 이렇게 쓴 이유?
 
 	}	
+	//insert.jsp페이지를 보는 함수
 	@GetMapping("/insert_view")
-	public String inser_viewr() {
-
+	public String inser_view() {
+		System.out.println("inser_view()..");
 		return "/dept/insert";
 	}
-	@GetMapping("/delete")
+	@GetMapping("/remove")
 	public String delete(int deptno) {
 		System.out.println("delete()..");
-		deptService.delete(deptno);
+		deptService.remove(deptno);
 
 		return "redirect:/dept/list";//redirect: 이렇게 쓴 이유?
 
