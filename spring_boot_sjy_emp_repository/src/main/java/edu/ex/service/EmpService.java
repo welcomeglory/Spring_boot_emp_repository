@@ -9,5 +9,4 @@ public interface EmpService {
 	List<EmpVO> getList();
 	void register(EmpVO empVO);
 	void remove(int empno);	
-
 }
