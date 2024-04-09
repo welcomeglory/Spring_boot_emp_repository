@@ -21,7 +21,7 @@
 			<td>부서번호</td>
 			<td>삭제</td>
 		</tr>
-		<c:forEach var="emp" items="${emps}"><!-- 오후에 설명 -->
+		<c:forEach var="emp" items="${emps}">
 			<tr>
 				<td>${emp.empno}</td>
 				<td>${emp.ename}</td>
