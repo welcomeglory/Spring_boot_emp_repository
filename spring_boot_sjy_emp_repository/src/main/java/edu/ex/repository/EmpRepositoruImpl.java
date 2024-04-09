@@ -46,7 +46,6 @@ public class EmpRepositoruImpl implements EmpRepository {
 
 				EmpVO emp = new EmpVO(empno, ename, job, mgr, hiredate, sal, comm, deptno);
 				empList.add(emp);
-
 			}
 
 		} catch (Exception e) {
