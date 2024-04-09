@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 import edu.ex.repository.DeptRepository;
 import edu.ex.repository.DeptRepositoryImpl;
 import edu.ex.vo.DeptVO;
+import lombok.extern.slf4j.Slf4j;
 
 @Service // 비지니스 로직
 public class DeptServiceImpl implements DeptService {

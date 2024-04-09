@@ -36,7 +36,7 @@ class EmpRepositoruImplTest {
 	@Disabled
 	@Test
 	void testInsert() {
-		empRepository.insert(new EmpVO(8000,"GRACE","PROGRAMER",7839,null,4000,	1000,30));
+		empRepository.insert(new EmpVO(8000,"GRACE","PROGRAMER",7839,null,4000,1000,30));
 		for(EmpVO empVO : empRepository.selectList() ) {
 			System.out.println("직원번호"+empVO.getEmpno());
 			System.out.println("직원이름"+empVO.getEname());			

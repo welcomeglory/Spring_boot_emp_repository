@@ -31,7 +31,6 @@ public class DeptController {
 		System.out.println("insert()..");
 		deptService.register(deptVO);//command객체?
 		return "redirect:/dept/list";//redirect: 이렇게 쓴 이유?
-
 	}	
 	//insert.jsp페이지를 보는 함수
 	@GetMapping("/insert_view")

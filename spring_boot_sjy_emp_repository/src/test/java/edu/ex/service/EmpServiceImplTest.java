@@ -8,7 +8,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 
 import edu.ex.vo.DeptVO;
 import edu.ex.vo.EmpVO;
-
+import lombok.extern.slf4j.Slf4j;
 @SpringBootTest
 class EmpServiceImplTest {
 
@@ -21,6 +21,7 @@ class EmpServiceImplTest {
 	}
 	@Test
 	void testgetList() {
+
 		for(EmpVO empVO : empService.getList() ) {
 			System.out.println("직원번호"+empVO.getEmpno());
 			System.out.println("직원이름"+empVO.getEname());			
