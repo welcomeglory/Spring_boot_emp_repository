@@ -3,6 +3,7 @@ package edu.ex.repository;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.Timestamp;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -37,10 +38,8 @@ public class EmpRepositoruImpl implements EmpRepository {
 				int empno = rs.getInt("empno");
 				String ename = rs.getString("ename");
 				String job = rs.getString("job");
-
 				int mgr = rs.getInt("mgr");
-
-				String hiredate = rs.getString("hiredate");
+				Timestamp hiredate = rs.getTimestamp("hiredate");
 				int sal = rs.getInt("sal");
 				int comm = rs.getInt("comm");
 				int deptno = rs.getInt("deptno");
@@ -82,7 +81,7 @@ public class EmpRepositoruImpl implements EmpRepository {
 			psmt.setString(2, empVO.getEname());
 			psmt.setString(3, empVO.getJob());
 			psmt.setInt(4,empVO.getMgr());
-			psmt.setString(5, empVO.getHiredate());
+			psmt.setTimestamp(5, empVO.getHiredate());
 			psmt.setInt(6,empVO.getSal());
 			psmt.setInt(7,empVO.getComm());
 			psmt.setInt(8,empVO.getDeptno());
