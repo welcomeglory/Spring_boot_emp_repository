@@ -18,7 +18,9 @@
         ]]>
     </select>
     <!--@Select("select 1+1 from dual")
-	public String getOnePlusOne2(); --> 
+	public String getOnePlusOne2(); 
+	id="함수이름" resultType="return값"
+	--> 
      <select id="getOnePlusOne2" resultType="string">  
     <![CDATA[
         select 1+1 from dual
