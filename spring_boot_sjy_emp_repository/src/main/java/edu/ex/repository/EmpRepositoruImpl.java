@@ -44,7 +44,7 @@ public class EmpRepositoruImpl implements EmpRepository {
 				int comm = rs.getInt("comm");
 				int deptno = rs.getInt("deptno");
 
-				EmpVO emp = new EmpVO(empno, ename, job, mgr, hiredate, sal, comm, deptno);
+				EmpVO emp = new EmpVO(empno, ename, job, mgr, hiredate, sal, comm, deptno,null);
 				empList.add(emp);
 			}
 
@@ -80,7 +80,7 @@ public class EmpRepositoruImpl implements EmpRepository {
 			psmt.setString(2, empVO.getEname());
 			psmt.setString(3, empVO.getJob());
 			psmt.setInt(4,empVO.getMgr());
-			psmt.setTimestamp(5, empVO.getHiredate());//string으로 넣을려면 2024-05-06,2024/05/06
+			psmt.setString(5, empVO.getHiredate1());//2024-05-06,2024/05/06
 			psmt.setInt(6,empVO.getSal());
 			psmt.setInt(7,empVO.getComm());
 			psmt.setInt(8,empVO.getDeptno());

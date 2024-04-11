@@ -51,37 +51,44 @@ public class EmpController {
 		model.addAttribute("emps",empService.getList());
 		return "/emp/list";
 	}
-
 	@PostMapping("/register")
-	public String insert(HttpServletRequest request) {
-		System.out.println("insert()..");
-		int  empno= Integer.valueOf(request.getParameter("empno"));
-		String ename = request.getParameter("ename");
-		String job = request.getParameter("job");
-		int  mgr= Integer.valueOf(request.getParameter("mgr"));
-		String  hiredate= request.getParameter("hiredate");
-		int sal= Integer.valueOf(request.getParameter("sal"));
-		int comm= Integer.valueOf(request.getParameter("comm"));
-		int deptno= Integer.valueOf(request.getParameter("deptno"));
-		
-		System.out.println(hiredate);
-		//Timestamp.valueOf(hiredate) String 값을 Timestamp로
-		Timestamp date = Timestamp.valueOf(hiredate);	
-		
-		EmpVO empVO =  new EmpVO();	
-		empVO.setEmpno(Integer.valueOf(empno));
-		empVO.setEname(ename);
-		empVO.setJob(job);
-		empVO.setMgr(Integer.valueOf(mgr));
-		empVO.setHiredate(date);
-		empVO.setSal(Integer.valueOf(sal));
-		empVO.setComm(Integer.valueOf(comm));
-		empVO.setDeptno(Integer.valueOf(deptno));
-
-		//empService.register(empVO);
+	public String register(EmpVO empVO, HttpServletRequest request) {
+		empService.register(empVO);
 		return "redirect:/emp/list";
+		
+	}
+	
 
-	}	
+//	@PostMapping("/register")
+//	public String insert(HttpServletRequest request) {
+//		System.out.println("insert()..");
+//		int  empno= Integer.valueOf(request.getParameter("empno"));
+//		String ename = request.getParameter("ename");
+//		String job = request.getParameter("job");
+//		int  mgr= Integer.valueOf(request.getParameter("mgr"));
+//		String  hiredate= request.getParameter("hiredate");
+//		int sal= Integer.valueOf(request.getParameter("sal"));
+//		int comm= Integer.valueOf(request.getParameter("comm"));
+//		int deptno= Integer.valueOf(request.getParameter("deptno"));
+//		
+//		System.out.println(hiredate);
+//		//Timestamp.valueOf(hiredate) String 값을 Timestamp로
+//		Timestamp date = Timestamp.valueOf(hiredate);	
+//		
+//		EmpVO empVO =  new EmpVO();	
+//		empVO.setEmpno(Integer.valueOf(empno));
+//		empVO.setEname(ename);
+//		empVO.setJob(job);
+//		empVO.setMgr(Integer.valueOf(mgr));
+//		empVO.setHiredate(date);
+//		empVO.setSal(Integer.valueOf(sal));
+//		empVO.setComm(Integer.valueOf(comm));
+//		empVO.setDeptno(Integer.valueOf(deptno));
+//
+//		//empService.register(empVO);
+//		return "redirect:/emp/list";
+//
+//	}	
 	//insert.jsp페이지를 보는 함수
 	@GetMapping("/insert_view")
 	public String inser_view() {
