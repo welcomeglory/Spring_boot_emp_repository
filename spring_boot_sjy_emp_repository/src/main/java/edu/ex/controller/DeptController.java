@@ -34,7 +34,7 @@ public class DeptController {
 	//insert.jsp페이지를 보는 함수
 	@GetMapping("/insert_view")
 	public String inser_view() {
-		System.out.println("inser_view()..");
+		System.out.println("insert_view()..");
 		return "/dept/insert";
 	}
 	@GetMapping("/remove")
@@ -44,9 +44,6 @@ public class DeptController {
 
 		return "redirect:/dept/list";//redirect: 이렇게 쓴 이유?
 
-	}	
-	
-	
-	
+	}		
 
 }

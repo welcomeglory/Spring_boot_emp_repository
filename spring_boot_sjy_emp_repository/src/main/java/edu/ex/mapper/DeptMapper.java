@@ -10,5 +10,9 @@ import edu.ex.vo.DeptVO;
 @Mapper
 public interface DeptMapper {
 	List<DeptVO> selectList();
+
+	void insert(DeptVO deptVO);
+
+	void delete(int deptno);
 	
 }

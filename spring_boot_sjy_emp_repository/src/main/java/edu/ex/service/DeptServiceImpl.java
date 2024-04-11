@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import edu.ex.mapper.DeptMapper;
 import edu.ex.repository.DeptRepository;
 import edu.ex.repository.DeptRepositoryImpl;
 import edu.ex.vo.DeptVO;
@@ -14,27 +15,27 @@ import lombok.extern.slf4j.Slf4j;
 public class DeptServiceImpl implements DeptService {
 
 	@Autowired
-	private DeptRepository deptRepository;// 다형성 적용
+	private DeptMapper deptMapper;// 다형성 적용
+//	private DeptRepository deptRepository;// 다형성 적용
 //	private DeptRepositoryImpl  deptRepositoryImpl;
 
 	@Override
 	public List<DeptVO> getList() {
-		System.out.println("getList()..");
-		return deptRepository.selectList();
+		System.out.println("getList() deptMapper..");
+		return deptMapper.selectList();
 	}
 	//repository에 있는 insert호출
 	@Override
 	public void register(DeptVO deptVO) {
 		System.out.println("register()..");
-		deptRepository.insert(deptVO);
+		deptMapper.insert(deptVO);
 		return;
 	}
 	@Override
 	public void remove(int deptno) {
 		System.out.println("delete()..");
-		deptRepository.delete(deptno);
-		return;
-		
+		deptMapper.delete(deptno);
+		return;		
 	}
 
 }
