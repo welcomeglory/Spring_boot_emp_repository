@@ -33,21 +33,21 @@ class EmpRepositoruImplTest {
 			System.out.println("부서번호"+empVO.getDeptno());		
 		}		
 	}
-//	@Disabled
-//	@Test
-//	void testInsert() {
-//		empRepository.insert(new EmpVO(8000,"GRACE","PROGRAMER",7839,null,4000,1000,30));
-//		for(EmpVO empVO : empRepository.selectList() ) {
-//			System.out.println("직원번호"+empVO.getEmpno());
-//			System.out.println("직원이름"+empVO.getEname());			
-//			System.out.println("직무"+empVO.getJob());
-//			System.out.println("부서"+empVO.getMgr());
-//			System.out.println("입사일"+empVO.getHiredate());
-//			System.out.println("월급"+empVO.getSal());
-//			System.out.println("보너스"+empVO.getComm());
-//			System.out.println("부서번호"+empVO.getDeptno());		
-//		}		
-//	}
+	@Disabled
+	@Test
+	void testInsert() {
+		empRepository.insert(new EmpVO(8000,"GRACE","PROGRAMER",7839,null,4000,1000,30,null));
+		for(EmpVO empVO : empRepository.selectList() ) {
+			System.out.println("직원번호"+empVO.getEmpno());
+			System.out.println("직원이름"+empVO.getEname());			
+			System.out.println("직무"+empVO.getJob());
+			System.out.println("부서"+empVO.getMgr());
+			System.out.println("입사일"+empVO.getHiredate());
+			System.out.println("월급"+empVO.getSal());
+			System.out.println("보너스"+empVO.getComm());
+			System.out.println("부서번호"+empVO.getDeptno());		
+		}		
+	}
 	@Disabled
 	@Test
 	void testDelete() {
