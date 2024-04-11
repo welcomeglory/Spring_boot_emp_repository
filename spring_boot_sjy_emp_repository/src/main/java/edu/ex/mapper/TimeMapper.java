@@ -9,4 +9,8 @@ public interface TimeMapper {
 	@Select("select sysdate from dual")
 	public String getTime();	
 	
+	@Select("select 1+1 from dual")
+	public String getOnePlusOne();	
+
+	
 }
