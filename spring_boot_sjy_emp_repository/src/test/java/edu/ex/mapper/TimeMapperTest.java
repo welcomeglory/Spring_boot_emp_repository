@@ -16,8 +16,12 @@ class TimeMapperTest {
 	private TimeMapper timeMapper;
 
 	@Test
-	void testTimeMapperTest() {
+	void testTimeMapper() {
 		assertNotNull(timeMapper);
 	}
-
+	
+	@Test
+	void testGetTime() {
+		log.info("시간이 나올까?==========",timeMapper.getTime());
+	}
 }
