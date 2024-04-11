@@ -15,4 +15,6 @@ public interface TimeMapper {
 	public String getOnePlusOne();	
 	
 	public String getTime2();
+	
+	public String getOnePlusOne2();
 }

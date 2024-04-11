@@ -3,7 +3,9 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
         
 <mapper namespace="edu.ex.mapper.TimeMapper">
-
+ <!--@Select("select sysdate from dual")
+	public String getTime2();	
+	 -->
     <select id="getTime2" resultType="string">
     <!-- 절대 세미콜론(;)붙이면 안됨!!! 
      <![CDATA[
@@ -15,4 +17,12 @@
         select sysdate from dual
         ]]>
     </select>
+    <!--@Select("select 1+1 from dual")
+	public String getOnePlusOne2(); --> 
+     <select id="getOnePlusOne2" resultType="string">  
+    <![CDATA[
+        select 1+1 from dual
+        ]]>
+    </select>
+    
 </mapper>
