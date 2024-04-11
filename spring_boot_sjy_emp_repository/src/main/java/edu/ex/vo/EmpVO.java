@@ -22,7 +22,7 @@ public class EmpVO {
 	private int sal;
 	private int comm;
 	private int deptno;
-	private String hiredate1;//날짜 입력용
+	private String hiredate1;//날짜입력
 
 	
 }
