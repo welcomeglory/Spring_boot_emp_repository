@@ -11,6 +11,5 @@ public interface TimeMapper {
 	
 	@Select("select 1+1 from dual")
 	public String getOnePlusOne();	
-
 	
 }
