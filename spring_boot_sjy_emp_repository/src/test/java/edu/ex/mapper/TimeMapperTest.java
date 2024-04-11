@@ -22,6 +22,6 @@ class TimeMapperTest {
 	
 	@Test
 	void testGetTime() {
-		log.info("시간이 나올까?==========",timeMapper.getTime());
+		log.info("시간이 나올까?=========="+timeMapper.getTime());
 	}
 }
