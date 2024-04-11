@@ -7,14 +7,14 @@ import org.springframework.boot.test.context.SpringBootTest;
 
 class EmpVOTest {
 
-//	@Test
-//	void testEmpVO() {
-//		EmpVO emp = new EmpVO(1234,"Charles","manager",9000,null,900,0,12);
-//		//주소 나오는거 확인
-//		System.out.println(emp);
-//
-//		assertNotNull(emp);
-//		assertEquals(emp.getEmpno(), 1234);
-//	}
+	@Test
+	void testEmpVO() {
+		EmpVO emp = new EmpVO(1234,"Charles","manager",9000,null,900,0,12,null);
+		//주소 나오는거 확인
+		System.out.println(emp);
+
+		assertNotNull(emp);
+		assertEquals(emp.getEmpno(), 1234);
+	}
 
 }
