@@ -32,6 +32,8 @@ class TimeMapperTest {
 	void testGetOnePlusOne() {
 		log.info("1 + 1 = "+timeMapper.getOnePlusOne());
 	}
-	
-	
+	@Test
+	void testGetTime2() {
+		log.info("시간이 나올까2?=========="+timeMapper.getTime2());
+	}	
 }
