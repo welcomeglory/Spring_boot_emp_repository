@@ -49,7 +49,7 @@
 			<tr>
 				<td>입사일</td>
 				<td>
-					<input type="date" name="hiredate1"><!-- "0000-00-00" -->
+					<input type="date" name="hiredate1"><!-- 0000-00-00 -->
 				</td>
 			</tr>
 			<tr>
